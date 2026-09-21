@@ -1,0 +1,75 @@
+# Ground-truth evaluation targets — OWNED fixtures only (Pool 1, see PENDING.md).
+#
+# expect:            finding categories that MUST fire (drives recall)
+# forbid_categories / forbid_title_contains: precision guardrails — checks that
+#                    must NOT fire (each violation fails the harness run)
+# fixture_dir:       static directory, served with `python -m http.server <port>`
+# fixture_script:    local mock server, started with `python <script>`
+# mode: repo         scanned with `run_repo_scan` (default: URL mode)
+# requires_render:   skipped with a note when Playwright is not installed
+# ready_url:         fixture readiness check when there is no scan `url` (repo mode)
+#
+# Note: demo_site and demo_repo need internet for the OSV.dev dependency lookups.
+targets:
+  - name: demo_site
+    url: http://127.0.0.1:8125/
+    fixture_dir: targets/demo_site
+    port: 8125
+    expect:
+      - missing-security-header
+      - exposed-sensitive-file
+      - secret-in-bundle
+      - service-role-key-exposed
+      - vulnerable-dependency
+      - source-map-exposed
+      - debug-config
+
+  - name: demo_supabase
+    url: http://127.0.0.1:8127/
+    fixture_script: targets/demo_supabase/mock_server.py
+    port: 8127
+    expect:
+      - missing-security-header
+      - supabase-rls-missing
+    forbid_categories:
+      - secret-in-bundle   # the anon key is public by design — must not be reported
+    forbid_title_contains:
+      - profiles           # the protected table must not be reported
+
+  - name: demo_firebase
+    url: http://127.0.0.1:8128/
+    fixture_script: targets/demo_firebase/mock_server.py
+    port: 8128
+    expect:
+      - missing-security-header
+      - firebase-rules-open
+    forbid_title_contains:
+      - currently empty    # the mock returns data → must be the CRITICAL case
+
+  - name: demo_spa
+    url: http://127.0.0.1:8131/
+    fixture_dir: targets/demo_spa
+    port: 8131
+    requires_render: true  # the planted secrets load via JavaScript — needs [crawl]
+    expect:
+      - missing-security-header
+      - secret-in-bundle
+      - service-role-key-exposed
+      - debug-config
+    forbid_title_contains:
+      - source map         # app.js.map does not exist — must not be reported
+
+  - name: demo_repo
+    mode: repo
+    repo: demo-org/demo-app
+    github_base: http://127.0.0.1:8130
+    ready_url: http://127.0.0.1:8130/
+    fixture_script: tools/mock_github.py
+    expect:
+      - exposed-sensitive-file    # committed .env + serviceAccountKey.json
+      - secret-in-bundle
+      - service-role-key-exposed
+      - debug-config
+      - vulnerable-dependency     # needs internet (OSV.dev), like demo_site
+    forbid_categories:
+      - missing-security-header   # repo mode has no web pages — must never fire

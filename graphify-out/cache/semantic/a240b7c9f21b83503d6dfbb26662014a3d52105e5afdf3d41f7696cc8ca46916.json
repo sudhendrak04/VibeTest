@@ -1,0 +1,1 @@
+{"nodes": [{"id": "progress_secretsbundle", "label": "secrets_bundle detector", "file_type": "code", "source_file": "vibetest/detectors/secrets_bundle.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

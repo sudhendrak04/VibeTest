@@ -1,0 +1,562 @@
+{
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\settings.json": {
+    "mtime": 1789974033.5251563,
+    "ast_hash": "7bf81dca0376bde3a32244b82bc7cbc0",
+    "semantic_hash": "7bf81dca0376bde3a32244b82bc7cbc0"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\opencode.json": {
+    "mtime": 1789974033.3190677,
+    "ast_hash": "f2ae21510d07365eb2bce8159272c7a0",
+    "semantic_hash": "f2ae21510d07365eb2bce8159272c7a0"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\plugins\\graphify.js": {
+    "mtime": 1789974033.3190677,
+    "ast_hash": "32b67963417a30cb80544e0b2a56a98d",
+    "semantic_hash": "32b67963417a30cb80544e0b2a56a98d"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\conftest.py": {
+    "mtime": 1789915533.0393162,
+    "ast_hash": "c3f2e4fb2b1d83ee71eafaec57543a3b",
+    "semantic_hash": "c3f2e4fb2b1d83ee71eafaec57543a3b"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\eval\\__init__.py": {
+    "mtime": 1789915532.7890983,
+    "ast_hash": "d2c50190b75d623a7d212e288f2fe5db",
+    "semantic_hash": "d2c50190b75d623a7d212e288f2fe5db"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\eval\\harness.py": {
+    "mtime": 1789972570.4773512,
+    "ast_hash": "d62317027513662a8578135304bd3d37",
+    "semantic_hash": "d62317027513662a8578135304bd3d37"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\eval\\results.json": {
+    "mtime": 1789972696.1078677,
+    "ast_hash": "ed10d0ef3b20915b883534023467cc5c",
+    "semantic_hash": "ed10d0ef3b20915b883534023467cc5c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_firebase\\mock_server.py": {
+    "mtime": 1789915226.7121148,
+    "ast_hash": "e66a2d75a3ee9976a2019280e9c356d9",
+    "semantic_hash": "e66a2d75a3ee9976a2019280e9c356d9"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_repo\\package.json": {
+    "mtime": 1789917976.4758413,
+    "ast_hash": "884b8320192c15038cb650dc1b94bbc3",
+    "semantic_hash": "884b8320192c15038cb650dc1b94bbc3"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_repo\\serviceAccountKey.json": {
+    "mtime": 1789917977.9261796,
+    "ast_hash": "5de11ef237afdb497857c53387dd2c52",
+    "semantic_hash": "5de11ef237afdb497857c53387dd2c52"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_repo\\src\\app.js": {
+    "mtime": 1789917977.6869316,
+    "ast_hash": "02acdf4d11e966ff12f84e0205b166c8",
+    "semantic_hash": "02acdf4d11e966ff12f84e0205b166c8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_site\\static\\app.js": {
+    "mtime": 1789914840.4161236,
+    "ast_hash": "02acdf4d11e966ff12f84e0205b166c8",
+    "semantic_hash": "02acdf4d11e966ff12f84e0205b166c8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_spa\\data.json": {
+    "mtime": 1789918575.4662123,
+    "ast_hash": "3a52225b24dfda95173f669f9d9e7e36",
+    "semantic_hash": "3a52225b24dfda95173f669f9d9e7e36"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_spa\\static\\app.js": {
+    "mtime": 1789918575.4185884,
+    "ast_hash": "02acdf4d11e966ff12f84e0205b166c8",
+    "semantic_hash": "02acdf4d11e966ff12f84e0205b166c8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_supabase\\mock_server.py": {
+    "mtime": 1789912165.978706,
+    "ast_hash": "4248584a7eb4a319608148cfbf5c20ca",
+    "semantic_hash": "4248584a7eb4a319608148cfbf5c20ca"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\conftest.py": {
+    "mtime": 1789200729.3575442,
+    "ast_hash": "d15effec72ef3b95a43cfbefafc6a1e9",
+    "semantic_hash": "d15effec72ef3b95a43cfbefafc6a1e9"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\fake_http.py": {
+    "mtime": 1789913299.417872,
+    "ast_hash": "f51363c93767fcf7ac111c5e40b1dcfc",
+    "semantic_hash": "f51363c93767fcf7ac111c5e40b1dcfc"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_consent.py": {
+    "mtime": 1789200734.952564,
+    "ast_hash": "1773446943b4dcfc1c1b6571ce132b59",
+    "semantic_hash": "1773446943b4dcfc1c1b6571ce132b59"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_contracts.py": {
+    "mtime": 1789200732.545443,
+    "ast_hash": "2135aeee6d6d86cf465e56c37318e0fe",
+    "semantic_hash": "2135aeee6d6d86cf465e56c37318e0fe"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_debug_config.py": {
+    "mtime": 1789914839.7640653,
+    "ast_hash": "b7f94024af3129b67c03440aa3d9259a",
+    "semantic_hash": "b7f94024af3129b67c03440aa3d9259a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_deps_osv.py": {
+    "mtime": 1789913399.0186777,
+    "ast_hash": "4b974d626039f20e42b13dd8ee65387d",
+    "semantic_hash": "4b974d626039f20e42b13dd8ee65387d"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_eval_harness.py": {
+    "mtime": 1789972589.4700127,
+    "ast_hash": "418d708c51fd7749f173c24bb282ea74",
+    "semantic_hash": "418d708c51fd7749f173c24bb282ea74"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_explain_llm.py": {
+    "mtime": 1789916702.7271557,
+    "ast_hash": "b3bfaadafd7d9732c80c9417d97c5791",
+    "semantic_hash": "b3bfaadafd7d9732c80c9417d97c5791"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_exposed_files.py": {
+    "mtime": 1789552521.6356826,
+    "ast_hash": "df1a8fbdfc055de28d2004d882e3fd41",
+    "semantic_hash": "df1a8fbdfc055de28d2004d882e3fd41"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_fingerprint.py": {
+    "mtime": 1789914402.3150716,
+    "ast_hash": "f1990b9aed8e97dedf16262b2a761653",
+    "semantic_hash": "f1990b9aed8e97dedf16262b2a761653"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_firebase_rules.py": {
+    "mtime": 1789915224.7873778,
+    "ast_hash": "aa3227af4933fda86c53eb1192bdcd3b",
+    "semantic_hash": "aa3227af4933fda86c53eb1192bdcd3b"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_js_bundle.py": {
+    "mtime": 1789552523.4807012,
+    "ast_hash": "a817358956a4f6b335847029d61af4a3",
+    "semantic_hash": "a817358956a4f6b335847029d61af4a3"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_katana.py": {
+    "mtime": 1789393209.5040784,
+    "ast_hash": "f6df73e81c050fffc80a99e1fa6dcd57",
+    "semantic_hash": "f6df73e81c050fffc80a99e1fa6dcd57"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_pipeline.py": {
+    "mtime": 1789394626.4587445,
+    "ast_hash": "cdcf5c033a022b06ed46e0b7597b877a",
+    "semantic_hash": "cdcf5c033a022b06ed46e0b7597b877a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_render.py": {
+    "mtime": 1789918574.27582,
+    "ast_hash": "7481a87b2fb8ddc80d28f8293672824a",
+    "semantic_hash": "7481a87b2fb8ddc80d28f8293672824a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_repo_scan.py": {
+    "mtime": 1789917986.4515252,
+    "ast_hash": "651840068b227c8cd5082d48af695523",
+    "semantic_hash": "651840068b227c8cd5082d48af695523"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_secrets_bundle.py": {
+    "mtime": 1789552559.1234887,
+    "ast_hash": "2e45dda96550e86791cc16d1ca345044",
+    "semantic_hash": "2e45dda96550e86791cc16d1ca345044"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_source_maps.py": {
+    "mtime": 1789914838.4333222,
+    "ast_hash": "e12b0efc98d4a5a458f5fca5738a9900",
+    "semantic_hash": "e12b0efc98d4a5a458f5fca5738a9900"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_supabase_rls.py": {
+    "mtime": 1789912175.380551,
+    "ast_hash": "4ff413fada5a694920f31cf6950204d8",
+    "semantic_hash": "4ff413fada5a694920f31cf6950204d8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tests\\test_web.py": {
+    "mtime": 1789917455.285245,
+    "ast_hash": "e730db4417287899b2188d13802b1cbe",
+    "semantic_hash": "e730db4417287899b2188d13802b1cbe"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tools\\mock_github.py": {
+    "mtime": 1789917979.72713,
+    "ast_hash": "dfa51e88a9b3de646158ec58a8fc2c30",
+    "semantic_hash": "dfa51e88a9b3de646158ec58a8fc2c30"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\tools\\mock_ollama.py": {
+    "mtime": 1789916700.6467168,
+    "ast_hash": "ee6aee067d6d716597c7fd280611fcbf",
+    "semantic_hash": "ee6aee067d6d716597c7fd280611fcbf"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\__init__.py": {
+    "mtime": 1789200440.196731,
+    "ast_hash": "2df830429f123c30cd07c5b7622bd23b",
+    "semantic_hash": "2df830429f123c30cd07c5b7622bd23b"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\__init__.py": {
+    "mtime": 1789200489.8612318,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\crawler.py": {
+    "mtime": 1789918559.5032501,
+    "ast_hash": "76fcf835e739049f310c771c76b4463a",
+    "semantic_hash": "76fcf835e739049f310c771c76b4463a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\fingerprint.py": {
+    "mtime": 1789914414.3226223,
+    "ast_hash": "ca355ca542c91a16bc55fbe039df9ccb",
+    "semantic_hash": "ca355ca542c91a16bc55fbe039df9ccb"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\github_repo.py": {
+    "mtime": 1789918015.356983,
+    "ast_hash": "a120be3b34a6804cb5500ba796c175ff",
+    "semantic_hash": "a120be3b34a6804cb5500ba796c175ff"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\js_bundle.py": {
+    "mtime": 1789918556.550601,
+    "ast_hash": "89996c4ccfca48027f57de18be0045e7",
+    "semantic_hash": "89996c4ccfca48027f57de18be0045e7"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\katana.py": {
+    "mtime": 1789393019.933795,
+    "ast_hash": "4cd95d7129cfedbf639290aa9707da57",
+    "semantic_hash": "4cd95d7129cfedbf639290aa9707da57"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\acquisition\\render.py": {
+    "mtime": 1789918554.802791,
+    "ast_hash": "9a39d07f1b4018464e11fd64778d2145",
+    "semantic_hash": "9a39d07f1b4018464e11fd64778d2145"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\analysis\\__init__.py": {
+    "mtime": 1789200677.3877716,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\analysis\\aggregate.py": {
+    "mtime": 1789200683.6541502,
+    "ast_hash": "bf4511980bf6d2e44f58ea93c7eb22c3",
+    "semantic_hash": "bf4511980bf6d2e44f58ea93c7eb22c3"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\analysis\\severity.py": {
+    "mtime": 1789200688.681928,
+    "ast_hash": "602a4bbb4193a2b2b152d8fe50ca9e11",
+    "semantic_hash": "602a4bbb4193a2b2b152d8fe50ca9e11"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\cli.py": {
+    "mtime": 1789918561.608182,
+    "ast_hash": "10251b2901a3088ae19c5f6732ea88f8",
+    "semantic_hash": "10251b2901a3088ae19c5f6732ea88f8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\config.py": {
+    "mtime": 1789918560.0360794,
+    "ast_hash": "8bdee84c3eaacfc5b4245f8cc62acb2f",
+    "semantic_hash": "8bdee84c3eaacfc5b4245f8cc62acb2f"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\__init__.py": {
+    "mtime": 1789200465.7817297,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\consent.py": {
+    "mtime": 1789200470.9695108,
+    "ast_hash": "ac12e2d280d6a30c858429baca26408e",
+    "semantic_hash": "ac12e2d280d6a30c858429baca26408e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\context.py": {
+    "mtime": 1789200474.927719,
+    "ast_hash": "449320db5d7c267dd252fc42b4b7f02c",
+    "semantic_hash": "449320db5d7c267dd252fc42b4b7f02c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\http_util.py": {
+    "mtime": 1789913279.0184517,
+    "ast_hash": "eb238c0fc3d1492297fec49f251bff24",
+    "semantic_hash": "eb238c0fc3d1492297fec49f251bff24"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\orchestrator.py": {
+    "mtime": 1789917935.0656378,
+    "ast_hash": "381e0740b263207cb7a970675300c510",
+    "semantic_hash": "381e0740b263207cb7a970675300c510"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\repo_scan.py": {
+    "mtime": 1789917912.6307273,
+    "ast_hash": "1648a3cf003be42a206bf465c6eab42e",
+    "semantic_hash": "1648a3cf003be42a206bf465c6eab42e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\core\\store.py": {
+    "mtime": 1789915999.803997,
+    "ast_hash": "5c67928c7a42793ddfcfbada96f6da4a",
+    "semantic_hash": "5c67928c7a42793ddfcfbada96f6da4a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\__init__.py": {
+    "mtime": 1789917940.662753,
+    "ast_hash": "8386caf1d82e66f949176b0d581ad2fc",
+    "semantic_hash": "8386caf1d82e66f949176b0d581ad2fc"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\base.py": {
+    "mtime": 1789394612.5009227,
+    "ast_hash": "bbed90b513594e2e86d46bcf2f735ca4",
+    "semantic_hash": "bbed90b513594e2e86d46bcf2f735ca4"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\debug_config.py": {
+    "mtime": 1789914835.7206461,
+    "ast_hash": "1a997008ebd2fe02d19686f6b00ab1bf",
+    "semantic_hash": "1a997008ebd2fe02d19686f6b00ab1bf"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\deps_osv.py": {
+    "mtime": 1789913397.6204097,
+    "ast_hash": "8390833d5eec18b0cd890caf2d5f7a0a",
+    "semantic_hash": "8390833d5eec18b0cd890caf2d5f7a0a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\exposed_files.py": {
+    "mtime": 1789917935.9153748,
+    "ast_hash": "39e088f22bbf9e3dd80276fc22c20f35",
+    "semantic_hash": "39e088f22bbf9e3dd80276fc22c20f35"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\firebase_rules.py": {
+    "mtime": 1789915222.285755,
+    "ast_hash": "0af5c89533d2534523388b2975961e91",
+    "semantic_hash": "0af5c89533d2534523388b2975961e91"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\headers.py": {
+    "mtime": 1789200676.4513285,
+    "ast_hash": "a7b90a32a3001c341483074c26ad171f",
+    "semantic_hash": "a7b90a32a3001c341483074c26ad171f"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\jwt_tools.py": {
+    "mtime": 1789912166.671884,
+    "ast_hash": "0cfc26a7cfc503e138671562a5132d6c",
+    "semantic_hash": "0cfc26a7cfc503e138671562a5132d6c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\registry.py": {
+    "mtime": 1789200512.1707509,
+    "ast_hash": "bccd8e90c6b7f16f5c483c7c20dc25ab",
+    "semantic_hash": "bccd8e90c6b7f16f5c483c7c20dc25ab"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\repo_deps.py": {
+    "mtime": 1789917940.080866,
+    "ast_hash": "60bed3d2802b16611eb2513cf3b75e60",
+    "semantic_hash": "60bed3d2802b16611eb2513cf3b75e60"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\repo_sensitive_files.py": {
+    "mtime": 1789917937.9950488,
+    "ast_hash": "16f22257be95a31ea01eb2c08292adc8",
+    "semantic_hash": "16f22257be95a31ea01eb2c08292adc8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\source_maps.py": {
+    "mtime": 1789914833.962093,
+    "ast_hash": "48bae94d13af4f4df950b3004cabfc88",
+    "semantic_hash": "48bae94d13af4f4df950b3004cabfc88"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\detectors\\supabase_rls.py": {
+    "mtime": 1789913305.70991,
+    "ast_hash": "5aff87d8648bbc6974a50baa67db97a8",
+    "semantic_hash": "5aff87d8648bbc6974a50baa67db97a8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\reporting\\__init__.py": {
+    "mtime": 1789200689.1582124,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\reporting\\explain.py": {
+    "mtime": 1789916696.9679167,
+    "ast_hash": "0540369b0f0174ce0f06af2d46d71869",
+    "semantic_hash": "0540369b0f0174ce0f06af2d46d71869"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\reporting\\html_report.py": {
+    "mtime": 1789914399.355904,
+    "ast_hash": "a49c064c4d615497a02b16823367767c",
+    "semantic_hash": "a49c064c4d615497a02b16823367767c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\schemas\\__init__.py": {
+    "mtime": 1789200447.76323,
+    "ast_hash": "68ffe12b129bf13cedbe409fd3d2602b",
+    "semantic_hash": "68ffe12b129bf13cedbe409fd3d2602b"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\schemas\\artifacts.py": {
+    "mtime": 1789200456.5065663,
+    "ast_hash": "d9f708842edefb92f1f71a172c09bd0e",
+    "semantic_hash": "d9f708842edefb92f1f71a172c09bd0e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\schemas\\findings.py": {
+    "mtime": 1789200462.3190782,
+    "ast_hash": "784b7b537b45d371f6c5e754ef5d9c40",
+    "semantic_hash": "784b7b537b45d371f6c5e754ef5d9c40"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\schemas\\scan.py": {
+    "mtime": 1789200464.5542722,
+    "ast_hash": "eee22ea1436c82e45839cd9e65e87e80",
+    "semantic_hash": "eee22ea1436c82e45839cd9e65e87e80"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\web\\__init__.py": {
+    "mtime": 1789200715.2989018,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\web\\app.py": {
+    "mtime": 1789917454.8612351,
+    "ast_hash": "c1a3757a4fe2230290c4e1c325ed73de",
+    "semantic_hash": "c1a3757a4fe2230290c4e1c325ed73de"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\vibetest\\web\\templates.py": {
+    "mtime": 1789917452.6958647,
+    "ast_hash": "bd33e3b5a72a0dbd65e2072f596c362b",
+    "semantic_hash": "bd33e3b5a72a0dbd65e2072f596c362b"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\CLAUDE.md": {
+    "mtime": 1789974033.5092232,
+    "ast_hash": "817fe671013b35ae0bc9301dfe449a87",
+    "semantic_hash": "817fe671013b35ae0bc9301dfe449a87"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\SKILL.md": {
+    "mtime": 1789974033.5092232,
+    "ast_hash": "26828fbc6cf325d3fb0ba6a3a28e03a1",
+    "semantic_hash": "26828fbc6cf325d3fb0ba6a3a28e03a1"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\add-watch.md": {
+    "mtime": 1781620721.8739133,
+    "ast_hash": "0df0589623217ca38a12bdcabfb42f4c",
+    "semantic_hash": "0df0589623217ca38a12bdcabfb42f4c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\exports.md": {
+    "mtime": 1781620721.8757606,
+    "ast_hash": "c04ddf8f1f5ef5e262ebec491a523c74",
+    "semantic_hash": "c04ddf8f1f5ef5e262ebec491a523c74"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\extraction-spec.md": {
+    "mtime": 1781620721.8757606,
+    "ast_hash": "24808b03abfeaf5f6435bb69c0125b2c",
+    "semantic_hash": "24808b03abfeaf5f6435bb69c0125b2c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\github-and-merge.md": {
+    "mtime": 1781620721.8788056,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": "cde13df085e4c492aeb7ba298a996d0d"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\hooks.md": {
+    "mtime": 1781620721.8819027,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": "3f545db6ce646650bb9de588f5512a27"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\query.md": {
+    "mtime": 1781620721.8824134,
+    "ast_hash": "c2a8e798674a81b02aa9975f43023819",
+    "semantic_hash": "c2a8e798674a81b02aa9975f43023819"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\transcribe.md": {
+    "mtime": 1781620721.8848412,
+    "ast_hash": "70f6aa30d6211f3a2c7e9fc45479f50c",
+    "semantic_hash": "70f6aa30d6211f3a2c7e9fc45479f50c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.claude\\skills\\graphify\\references\\update.md": {
+    "mtime": 1781620721.8848412,
+    "ast_hash": "0dad167a95bdb389f02fecffb60b1bc8",
+    "semantic_hash": "0dad167a95bdb389f02fecffb60b1bc8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\SKILL.md": {
+    "mtime": 1789974033.303327,
+    "ast_hash": "edf0f19d2d512df1463ac70aaa5e02a6",
+    "semantic_hash": "edf0f19d2d512df1463ac70aaa5e02a6"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\add-watch.md": {
+    "mtime": 1781620721.8146327,
+    "ast_hash": "0df0589623217ca38a12bdcabfb42f4c",
+    "semantic_hash": "0df0589623217ca38a12bdcabfb42f4c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\exports.md": {
+    "mtime": 1781620721.8146327,
+    "ast_hash": "c04ddf8f1f5ef5e262ebec491a523c74",
+    "semantic_hash": "c04ddf8f1f5ef5e262ebec491a523c74"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\extraction-spec.md": {
+    "mtime": 1781620721.8146327,
+    "ast_hash": "24808b03abfeaf5f6435bb69c0125b2c",
+    "semantic_hash": "24808b03abfeaf5f6435bb69c0125b2c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\github-and-merge.md": {
+    "mtime": 1781620721.819411,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": "cde13df085e4c492aeb7ba298a996d0d"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\hooks.md": {
+    "mtime": 1781620721.8227694,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": "3f545db6ce646650bb9de588f5512a27"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\query.md": {
+    "mtime": 1781620721.8247266,
+    "ast_hash": "c2a8e798674a81b02aa9975f43023819",
+    "semantic_hash": "c2a8e798674a81b02aa9975f43023819"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\transcribe.md": {
+    "mtime": 1781620721.8253183,
+    "ast_hash": "70f6aa30d6211f3a2c7e9fc45479f50c",
+    "semantic_hash": "70f6aa30d6211f3a2c7e9fc45479f50c"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\.opencode\\skills\\graphify\\references\\update.md": {
+    "mtime": 1781620721.8273277,
+    "ast_hash": "0dad167a95bdb389f02fecffb60b1bc8",
+    "semantic_hash": "0dad167a95bdb389f02fecffb60b1bc8"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\AGENTS.md": {
+    "mtime": 1789974033.3190677,
+    "ast_hash": "7fdb6e31fb1594ebc89ec609a611a855",
+    "semantic_hash": "7fdb6e31fb1594ebc89ec609a611a855"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\CLAUDE.md": {
+    "mtime": 1789974033.5251563,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\PENDING.md": {
+    "mtime": 1789972713.3470798,
+    "ast_hash": "512ab53dbabeaa2e2d7e4330b6647fe6",
+    "semantic_hash": "512ab53dbabeaa2e2d7e4330b6647fe6"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\PROBLEMS.md": {
+    "mtime": 1789918336.4374027,
+    "ast_hash": "e8cebc3bf6511eb1369c3526a0d84c5a",
+    "semantic_hash": "e8cebc3bf6511eb1369c3526a0d84c5a"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\PROGRESS.md": {
+    "mtime": 1789972712.9751992,
+    "ast_hash": "57f3ac7ae2fc7ad6acbff5719edb6016",
+    "semantic_hash": "57f3ac7ae2fc7ad6acbff5719edb6016"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\PROJECTS.md": {
+    "mtime": 1789916042.3029606,
+    "ast_hash": "8654e1e7b8f1aac0ab6937fe634d6097",
+    "semantic_hash": "8654e1e7b8f1aac0ab6937fe634d6097"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\docs\\ARCHITECTURE.md": {
+    "mtime": 1789918679.5927463,
+    "ast_hash": "c150f6d083f5c158c6ebfab2dea5b36e",
+    "semantic_hash": "c150f6d083f5c158c6ebfab2dea5b36e"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\eval\\results.md": {
+    "mtime": 1789972696.1078677,
+    "ast_hash": "75eb1a43a276bfc73538b480be1c0486",
+    "semantic_hash": "75eb1a43a276bfc73538b480be1c0486"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\eval\\targets.yaml": {
+    "mtime": 1789972572.8464541,
+    "ast_hash": "421f30eeb7079e09888b0adf855287d6",
+    "semantic_hash": "421f30eeb7079e09888b0adf855287d6"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\README.md": {
+    "mtime": 1789918576.404805,
+    "ast_hash": "4d05626d513b0b276ac16aa49ae88734",
+    "semantic_hash": "4d05626d513b0b276ac16aa49ae88734"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_repo\\README.md": {
+    "mtime": 1789917976.4711654,
+    "ast_hash": "01683955996b08f700c18f228d9da220",
+    "semantic_hash": "01683955996b08f700c18f228d9da220"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_site\\index.html": {
+    "mtime": 1789912162.2618823,
+    "ast_hash": "3bc34ef3689e1d3fc02d5f6a80117efc",
+    "semantic_hash": "3bc34ef3689e1d3fc02d5f6a80117efc"
+  },
+  "D:\\sudhendra\\CLG\\Major\\VibeTest\\targets\\demo_spa\\index.html": {
+    "mtime": 1789918574.6811695,
+    "ast_hash": "425ced3e1711413449ad5d7c22f58cf2",
+    "semantic_hash": "425ced3e1711413449ad5d7c22f58cf2"
+  }
+}

@@ -1,0 +1,1 @@
+{"nodes": [{"id": "progress_headers", "label": "headers detector", "file_type": "code", "source_file": "vibetest/detectors/headers.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-09-21T06:38:16.103171+00:00",
+  "targets": [
+    {
+      "name": "demo_site",
+      "url": "http://127.0.0.1:8125/",
+      "findings": 15,
+      "tp": [
+        "debug-config",
+        "exposed-sensitive-file",
+        "missing-security-header",
+        "secret-in-bundle",
+        "service-role-key-exposed",
+        "source-map-exposed",
+        "vulnerable-dependency"
+      ],
+      "fp": [],
+      "fn": [],
+      "violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "name": "demo_supabase",
+      "url": "http://127.0.0.1:8127/",
+      "findings": 6,
+      "tp": [
+        "missing-security-header",
+        "supabase-rls-missing"
+      ],
+      "fp": [],
+      "fn": [],
+      "violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "name": "demo_firebase",
+      "url": "http://127.0.0.1:8128/",
+      "findings": 6,
+      "tp": [
+        "firebase-rules-open",
+        "missing-security-header"
+      ],
+      "fp": [],
+      "fn": [],
+      "violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "name": "demo_spa",
+      "url": "http://127.0.0.1:8131/",
+      "findings": 9,
+      "tp": [
+        "debug-config",
+        "missing-security-header",
+        "secret-in-bundle",
+        "service-role-key-exposed"
+      ],
+      "fp": [],
+      "fn": [],
+      "violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "name": "demo_repo",
+      "url": "http://127.0.0.1:8130/demo-org/demo-app",
+      "findings": 9,
+      "tp": [
+        "debug-config",
+        "exposed-sensitive-file",
+        "secret-in-bundle",
+        "service-role-key-exposed",
+        "vulnerable-dependency"
+      ],
+      "fp": [],
+      "fn": [],
+      "violations": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "overall": {
+    "tp": 20,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "violations_total": 0
+  }
+}

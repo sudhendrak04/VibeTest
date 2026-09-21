@@ -1,0 +1,53 @@
+# VibeTest configuration.
+# CONSENT: add OWNED or explicitly authorized targets ONLY.
+# The scanner hard-refuses anything not on this list (see PENDING.md legal note).
+[vibetest]
+allowed_targets = ["localhost", "127.0.0.1"]
+# Examples of what belongs here later (Pools 1-2 in PROJECTS.md §6):
+#   "our-planted-app.vercel.app"
+#   "our-supabase-demo.netlify.app"
+#   "our-project-default-rtdb.firebaseio.com"   (for the Firebase rules check)
+
+# Local LLM explanations (Ollama) — explanation layer only, never detection.
+# Without Ollama running, the scanner falls back to template explanations.
+# Enable with:  vibetest scan <url> --llm
+# NOTE: these two names are the models installed on this machine. The project
+# plan's preferred models are qwen3:8b (16 GB RAM) / phi4-mini (8 GB RAM) —
+# run `ollama pull qwen3:8b` to match the plan.
+ollama_model = "qwen2.5:3b"
+ollama_fallback_model = "mistral:latest"
+ollama_api_url = "http://127.0.0.1:11434"
+ollama_timeout = 120.0
+llm_cache_path = ".llm_cache.json"  # per-finding cache; safe to delete
+database_path = "vibetest.db"
+request_timeout = 15.0
+
+# Gentle unauthenticated probes (exposed-file checks, later Supabase RLS).
+# Scans only ever run against allowlisted targets. Set false (or use --no-probes)
+# for a passive-only scan profile.
+enable_probes = true
+
+# Katana discovery (soft dependency — falls back to single-page fetch if absent).
+# Install (free): prebuilt binary from ProjectDiscovery GitHub releases, or
+# `go install github.com/projectdiscovery/katana/cmd/katana@latest`
+katana_bin = "katana"
+katana_depth = 2
+katana_rate_limit = 10          # requests/second — keep gentle
+katana_process_timeout = 120.0
+max_pages = 20                  # max pages fetched per scan
+
+# OSV.dev dependency-vulnerability lookups (free service, no key needed).
+# This is an external database service, never a scan target. Set to "" to disable.
+osv_api_url = "https://api.osv.dev/v1/query"
+osv_max_packages = 30
+
+# GitHub repo mode (`vibetest scan-repo owner/name`): PUBLIC repositories only,
+# static analysis of the source. No requests are made to the deployed site.
+github_base = "https://github.com"
+
+# Headless rendering of JavaScript-built pages (optional, soft dependency).
+# Install:  pip install -e ".[crawl]"  then  playwright install chromium
+# Without it, the scanner keeps the raw HTML and everything else still works.
+render_spa = true
+max_render_pages = 5
+render_timeout = 20.0

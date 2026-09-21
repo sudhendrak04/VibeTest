@@ -1,0 +1,13 @@
+<html>
+  <head><title>SPA demo target</title></head>
+  <body>
+    <div id="root"></div>
+    <script>
+      fetch("/data.json");
+      const app = document.createElement("script");
+      app.src = "/static/app.js";
+      document.head.appendChild(app);
+      document.getElementById("root").innerHTML = "<h1>Welcome to the SPA demo</h1>";
+    </script>
+  </body>
+</html>
