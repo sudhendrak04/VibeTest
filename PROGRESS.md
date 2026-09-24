@@ -4,7 +4,7 @@
 written so it can be read directly to a project guide / professor. It is **updated after
 every coding session** (standing rule in `AGENTS.md`).
 
-*Last updated: 2026-09-21 — session 16 (harness now grades all five fixtures).*
+*Last updated: 2026-09-24 — session 18 (PDF report download).*
 
 ---
 
@@ -81,7 +81,7 @@ for common security mistakes, and reports them in plain English to a **non-exper
 | HTML report | Self-contained, severity-colored report with evidence; can be shown to non-experts | ✅ |
 | CLI | `vibetest scan <url>`, `vibetest scan-repo <owner/name>`, `vibetest targets`, `vibetest serve`; `--no-probes` = passive-only mode · `--no-render` = skip headless rendering | ✅ |
 | Evaluation harness | Starts ALL owned demo targets (5 — URL, repo and SPA modes), scans them end-to-end, compares findings with the planted ground-truth labels, and writes category-level precision/recall (`eval/results.md`) with precision guardrails; skips render-dependent targets with a note when Playwright is absent | ✅ |
-| Dashboard (web UI) | Polished scan launcher + results viewer (FastAPI + Jinja2): overview stats, severity distribution bars, paste-a-URL scan with live progress panel, per-scan details with styled finding cards, detected technology, one-click full report, JSON API. Scans go through the **same consent gate** as the CLI (non-allowlisted URLs refused); one scan at a time | ✅ |
+| Dashboard (web UI) | Scan launcher + results viewer (FastAPI + Jinja2): paste a **website URL or public GitHub repo link** (auto-detected server-side) → live progress (mode-aware) → findings; overview stats, severity bars, styled finding cards, detected technology, "Website"/"GitHub repository" badge, one-click full report, **Download PDF** (Playwright `page.pdf()`, A4, page-break-safe; falls back to browser print when unavailable), JSON API. Every scan requires an **explicit authorization checkbox**; the confirmed website host is allowlisted for that run only (same as CLI `--allow`) while repo scans are passive public analysis; one scan at a time | ✅ |
 
 ### 3.5 Safety & ethics features (built-in, not afterthoughts)
 
@@ -92,9 +92,9 @@ for common security mistakes, and reports them in plain English to a **non-exper
   (verified by automated checks).
 - **Soft dependencies** — missing Katana or offline OSV → the tool degrades gracefully
   instead of crashing.
-- **Gated dashboard scans** — the web UI can start scans, but only through the same
-  consent gate as the CLI: non-allowlisted URLs are refused before any network
-  request, and only one scan runs at a time.
+- **Gated dashboard scans** — every dashboard scan requires an explicit
+  authorization confirmation (checkbox); the confirmed website host is allowlisted
+  for that run only (same mechanism as CLI `--allow`), and only one scan runs at a time.
 - **Browser traffic is gated too** — headless rendering aborts any request outside
   the allowlist, so the consent gate governs the browser exactly like the crawler.
 
@@ -112,7 +112,7 @@ Deliberately vulnerable **fake** fixtures owned by the team (legal, safe, reprod
 
 ## 5. Evidence: tests and live demos
 
-- **111 automated tests, all passing** (`pytest`) — no real network used in tests
+- **122 automated tests, all passing** (`pytest`) — no real network used in tests
   (fake HTTP client records what *would* have been requested).
 - **Evaluation harness result (category-level, vs planted ground truth):**
   precision **1.00** · recall **1.00** · F1 **1.00** · **0 constraint violations** ·
@@ -140,6 +140,12 @@ Deliberately vulnerable **fake** fixtures owned by the team (legal, safe, reprod
   - SPA rendering verified live: the shell-only scan (`--no-render`) found **5 findings**;
     with rendering the same scan found **9** — the JavaScript-injected bundle exposed
     3 CRITICAL leaked secrets that were completely invisible without a browser.
+  - Dashboard two-mode flow verified live: paste `github.com/owner/repo` → repo mode
+    ("Downloading & analysing repository…") → findings + "GitHub repository" badge;
+    paste a website URL → URL mode + "Website" badge; scanning without ticking the
+    authorization checkbox is refused (HTTP 403).
+  - PDF export verified live: the dashboard's **Download PDF** produced a valid
+    2-page `vibetest-<host>-<date>.pdf` (A4, severity colors preserved) from a real scan.
   - LLM mode (`--llm`) verified against **real local Ollama** (qwen2.5:3b): all 6
     findings explained by the model (cache: 6 entries); a second scan with the warm
     cache took **1.9 s** (vs ~3 min cold). Without Ollama, it falls back to templates.
@@ -170,3 +176,5 @@ Deliberately vulnerable **fake** fixtures owned by the team (legal, safe, reprod
 | 14 | 2026-09-20 | GitHub repo scan mode (`scan-repo`): safe public-archive download, source-file mapping, `repo_sensitive_files` + `repo_deps` detectors; mock GitHub dev tool + demo repo fixture; 11 new tests |
 | 15 | 2026-09-20 | Playwright SPA rendering (optional `[crawl]` extra): SPA detection, headless rendering with consent-gated browser traffic, dynamic-script discovery; SPA demo fixture; 9 new tests |
 | 16 | 2026-09-21 | Eval harness extended to all 5 fixtures: repo-mode dispatch, render-dependent skip, flexible fixture readiness URL; `demo_spa` + `demo_repo` ground-truth labels; results regenerated (20 categories, P=R=F1=1.00, 0 violations); 2 new tests |
+| 17 | 2026-09-21 | Dashboard accepts website URLs **or public GitHub repo refs** (auto-detect), explicit authorization checkbox with run-scoped allowlisting, mode-aware progress text, Website/GitHub-repository badge; `parse_repo_ref` hardened against foreign hosts; 6 new tests |
+| 18 | 2026-09-24 | PDF report download: `reporting/pdf.py` (Playwright `page.pdf()`, A4, page-break-safe) + dashboard button with browser-print fallback; WeasyPrint extra dropped; 6 new tests |

@@ -64,7 +64,7 @@ runs the same detectors statically — no live requests to the deployed site.
   soft dependency: graceful fallback to plain httpx crawl if the binary is missing)
 - httpx + Playwright (headless Chromium — optional `[crawl]` extra; renders SPA shells only; every browser request is consent-gated; graceful raw-HTML fallback when not installed)
 - Detectors: own rules + Gitleaks / OSV-Scanner (and stretch: Semgrep CE) as subprocess plugins
-- Reporting: Jinja2 → self-contained HTML (+ WeasyPrint PDF, Week 9) · Dashboard: FastAPI + Jinja2, localhost-only; can trigger scans, but ONLY through the same consent gate (allowlist enforced in the pipeline, single-flight)
+- Reporting: Jinja2 → self-contained HTML + downloadable PDF (Playwright `page.pdf()`, soft dependency — same `[crawl]` extra; dashboard falls back to browser print when unavailable) · Dashboard: FastAPI + Jinja2, localhost-only; accepts website URLs **or public GitHub repo refs** (auto-detected); every scan requires an explicit authorization checkbox — the confirmed website host is allowlisted for that run only (same as CLI `--allow`), repo scans are passive public analysis; single-flight
 - LLM: Ollama, JSON-schema structured output, temperature 0, pinned model digest.
   Primary: Qwen3 8B Q4_K_M (16 GB RAM) · Fallback: Phi-4-mini (8 GB RAM) ·
   Code-heavy: Qwen2.5-Coder 7B. Explanation layer ONLY (`--llm`); automatic

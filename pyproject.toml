@@ -20,10 +20,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Week 4: SPA rendering (heavy — installs Chromium). Only Builder A needs this.
+# SPA rendering (heavy — installs Chromium). Also powers PDF report export.
 crawl = ["playwright>=1.44"]
-# Week 9: PDF export (heavy on Windows). Optional.
-pdf = ["weasyprint>=62"]
 dev = ["pytest>=8", "pytest-snapshot>=0.9"]
 
 [project.scripts]

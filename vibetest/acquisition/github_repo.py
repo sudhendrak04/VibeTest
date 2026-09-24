@@ -48,7 +48,8 @@ _TEXT_EXTENSIONS = {
     ".ini", ".cfg", ".conf", ".txt", ".md", ".sh", ".ps1", ".py", ".rb",
     ".go", ".php", ".java", ".lock",
 }
-_REPO_PATH_RE = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+_OWNER_RE = re.compile(r"^[A-Za-z0-9-]+$")  # GitHub owners: letters, digits, hyphens
+_REPO_RE = re.compile(r"^[A-Za-z0-9_.-]+$")  # repo names may also contain . and _
 
 
 def parse_repo_ref(text: str) -> tuple[str, str]:
@@ -66,9 +67,14 @@ def parse_repo_ref(text: str) -> tuple[str, str]:
     if raw.endswith(".git"):
         raw = raw[:-4]
     segments = [s for s in raw.split("/") if s]
-    if len(segments) < 2 or not _REPO_PATH_RE.match("/".join(segments[:2])):
+    if len(segments) < 2:
         raise ValueError("expected a repository like 'owner/name' or a github.com URL")
-    return segments[0], segments[1]
+    owner, repo = segments[0], segments[1]
+    if not _OWNER_RE.match(owner) or not _REPO_RE.match(repo):
+        # e.g. a pasted foreign host like "gitlab.com/o/r" must not be treated
+        # as owner "gitlab.com" — reject so callers can fall back / error clearly
+        raise ValueError("expected a repository like 'owner/name' or a github.com URL")
+    return owner, repo
 
 
 def download_repo(

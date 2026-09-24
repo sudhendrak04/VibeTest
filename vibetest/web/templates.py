@@ -87,6 +87,9 @@ PAGE = """<!doctype html>
   .chip{background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600}
   .btn{display:inline-block;padding:.55rem 1rem;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;font-size:.86rem;white-space:nowrap}
   .btn:hover{background:var(--accent-2);text-decoration:none}
+  .actions{display:flex;flex-direction:column;gap:.5rem;align-items:flex-end}
+  .btn.secondary{background:#fff;color:#3730a3;border:1px solid #c7d2fe}
+  .btn.secondary:hover{background:#eef2ff}
   .finding{border-left:6px solid #cbd5e1}
   .finding.critical{border-left-color:var(--critical)}
   .finding.high{border-left-color:var(--high)}
@@ -102,6 +105,9 @@ PAGE = """<!doctype html>
   .todo{border:1px solid #bbf7d0;background:#f0fdf4;border-radius:10px;padding:.65rem .85rem;margin-top:.6rem}
   .todo strong{color:#166534;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
   .todo p{margin:.25rem 0 0;font-size:.88rem;color:#14532d}
+  .confirm{display:flex;align-items:flex-start;gap:.5rem;width:100%;margin-top:.6rem;font-size:.82rem;color:#475569;line-height:1.4}
+  .confirm input{margin-top:.18rem;flex:none}
+  .chip.kind{background:#111827;color:#f8fafc;border-color:#111827}
   .foot{max-width:1020px;margin:0 auto 2.2rem;padding:0 1rem;color:#94a3b8;font-size:.78rem;text-align:center}
 </style>
 </head>
@@ -146,7 +152,10 @@ if (form) {
       resp = await fetch("/api/scan", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({url: document.getElementById("scan-url").value.trim()}),
+        body: JSON.stringify({
+          url: document.getElementById("scan-url").value.trim(),
+          authorized: document.getElementById("scan-authorized").checked,
+        }),
       });
     } catch (networkError) {
       showError("Could not reach the dashboard.");
@@ -157,7 +166,7 @@ if (form) {
       showError(data.detail || "Scan refused.");
       return;
     }
-    const {job_id} = await resp.json();
+    const {job_id, mode} = await resp.json();
     const started = Date.now();
     while (true) {
       await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -171,7 +180,38 @@ if (form) {
       if (job.status === "done") { window.location = "/scan/" + job.scan_id; return; }
       if (job.status === "failed") { showError("Scan failed: " + (job.error || "unknown error")); return; }
       const secs = Math.round((Date.now() - started) / 1000);
-      msg.textContent = "Scanning… " + secs + "s — this can take a little while";
+      const verb = mode === "repo" ? "Downloading & analysing repository… " : "Scanning… ";
+      msg.textContent = verb + secs + "s — this can take a little while";
+    }
+  });
+}
+
+const pdfBtn = document.getElementById("pdf-btn");
+if (pdfBtn) {
+  const hint = document.getElementById("pdf-hint");
+  pdfBtn.addEventListener("click", async () => {
+    pdfBtn.disabled = true;
+    try {
+      const resp = await fetch(pdfBtn.dataset.href);
+      if (!resp.ok) {
+        const data = await resp.json().catch(() => ({}));
+        throw new Error(data.detail || "PDF export unavailable");
+      }
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = pdfBtn.dataset.filename || "vibetest-report.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: open the HTML report and point at the browser's Print-to-PDF
+      window.open(pdfBtn.dataset.reportHref, "_blank");
+      if (hint) hint.classList.remove("hidden");
+    } finally {
+      pdfBtn.disabled = false;
     }
   });
 }
@@ -189,10 +229,15 @@ LIST_BODY = """
 </div>
 
 <section class="card">
-  <h2>Scan a website</h2>
-  <p class="hint">Paste an owned or explicitly authorized URL. The consent gate refuses anything else — before a single request is made.</p>
+  <h2>Scan a website or GitHub repo</h2>
+  <p class="hint">Websites: authorized targets only — the consent gate refuses anything else.
+  GitHub: public repositories — passive static analysis, no requests to any deployed site.</p>
   <form id="scan-form">
-    <input id="scan-url" type="url" placeholder="https://your-app.vercel.app" required>
+    <input id="scan-url" type="text" placeholder="https://your-app.vercel.app  ·  github.com/owner/repo" required>
+    <label class="confirm">
+      <input type="checkbox" id="scan-authorized" required>
+      I confirm I own this target or have written permission to test it (or it is a public repository).
+    </label>
     <button type="submit" id="scan-btn">Start scan</button>
   </form>
   <div id="scan-box" class="scan-box hidden">
@@ -228,7 +273,7 @@ LIST_BODY = """
 </a>
 {% endfor %}
 {% else %}
-<div class="card empty">No scans yet — paste a URL above, or run <code>vibetest scan &lt;url&gt;</code> in the CLI.</div>
+<div class="card empty">No scans yet — paste a URL or GitHub reference above, or use the CLI (<code>vibetest scan</code> / <code>vibetest scan-repo</code>).</div>
 {% endif %}
 """
 
@@ -239,7 +284,10 @@ DETAIL_BODY = """
   <div class="left">
     <h1>{{ row.target_url }}</h1>
     <div class="muted">{{ row.started_at.strftime('%d %b %Y, %H:%M') }} UTC · scan {{ row.scan_id[:10] }}</div>
-    {% if tech %}<div class="chips">{% for t in tech %}<span class="chip">{{ t }}</span>{% endfor %}</div>{% endif %}
+    <div class="chips">
+      <span class="chip kind">{{ kind }}</span>
+      {% for t in tech %}<span class="chip">{{ t }}</span>{% endfor %}
+    </div>
     <div class="chips">
       {% for sev in ("critical", "high", "medium", "low", "info") %}
         {% if summary[sev] %}<span class="badge {{ sev }}">{{ summary[sev] }} {{ sev }}</span>{% endif %}
@@ -247,7 +295,14 @@ DETAIL_BODY = """
       {% if not summary.total %}<span class="badge none">no findings</span>{% endif %}
     </div>
   </div>
-  <a class="btn" href="/scan/{{ row.scan_id }}/report">Open full report</a>
+  <div class="actions">
+    <a class="btn" href="/scan/{{ row.scan_id }}/report">Open full report</a>
+    <button class="btn secondary" id="pdf-btn"
+            data-href="/scan/{{ row.scan_id }}/report.pdf"
+            data-report-href="/scan/{{ row.scan_id }}/report"
+            data-filename="vibetest-report-{{ row.scan_id[:8] }}.pdf">Download PDF</button>
+    <div id="pdf-hint" class="muted hidden">PDF export unavailable on this machine — use <strong>Ctrl+P &rarr; Save as PDF</strong> in the opened report tab.</div>
+  </div>
 </section>
 
 {% for f in findings %}

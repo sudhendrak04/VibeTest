@@ -59,14 +59,18 @@ logs/
 # ---------------------------------------------------------------------------
 # graphify knowledge graph (graphify-out/)
 # Commit the portable outputs (graph.html, graph.json, GRAPH_REPORT.md,
-# manifest.json, cache/) so the team shares the map. Ignore the
-# machine-specific and regenerable files:
+# manifest.json) so the team shares the map. Ignore machine-specific,
+# regenerable, and churn-prone files:
 # ---------------------------------------------------------------------------
 graphify-out/cost.json
 graphify-out/.graphify_python
 graphify-out/.graphify_root
 graphify-out/.graphify_labels.json
 graphify-out/.graphify_*.json
+# Per-file AST/semantic cache — rebuilt on demand; changes on every graph update
+graphify-out/cache/
+# Converted sidecars from PDFs/office docs, if any are ever processed
+graphify-out/converted/
 
 # ---------------------------------------------------------------------------
 # Editor / OS
@@ -74,6 +78,7 @@ graphify-out/.graphify_*.json
 .idea/
 .vscode/
 *.code-workspace
+.claude/settings.local.json
 .DS_Store
 Thumbs.db
 Desktop.ini

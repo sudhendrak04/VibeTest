@@ -62,7 +62,7 @@ non-reproducible, slow on CPU).
 Python 3.12+ · httpx + Playwright · **Katana (MIT, external binary) for URL/endpoint
 discovery** · selectolax/BeautifulSoup · SQLite (SQLModel/SQLAlchemy) ·
 Pydantic · Typer CLI · FastAPI + Jinja2 dashboard (localhost-only, read-only) ·
-Jinja2 HTML report + WeasyPrint PDF (Week 9) · Gitleaks/OSV-Scanner/(stretch: Semgrep CE) as
+Jinja2 HTML report + PDF download (Playwright `page.pdf()`) · Gitleaks/OSV-Scanner/(stretch: Semgrep CE) as
 subprocess plugins · ollama python client · pytest + pytest-snapshot.
 
 **Alternatives rejected:** httpx-only lite crawler (misses JS-rendered SPAs — fatal for

@@ -62,7 +62,7 @@ VibeTest/
 │   ├── reporting/
 │   │   ├── explain.py          # local Ollama (JSON mode, temp 0) + template fallback
 │   │   ├── html_report.py      # Jinja2 → self-contained HTML
-│   │   └── pdf.py              # W9: WeasyPrint (optional extra)
+│   │   └── pdf.py              # PDF export via Playwright page.pdf() (soft dep, [crawl] extra)
 │   └── web/
 │       └── app.py              # localhost dashboard (FastAPI + Jinja2, read-only)
 ├── tests/
@@ -129,6 +129,6 @@ probes are enabled — and even then, every request goes through the consent gat
 - **Katana dependency mode** — DECIDED: soft dependency (optional binary, graceful
   fallback to plain httpx crawl). Full rationale in PROJECTS.md §11; not an open item.
 - **Dashboard** — DECIDED: FastAPI + Jinja2, localhost-only; scan launcher + results viewer, gated by the same consent allowlist (single-flight).
-- **PDF export** (WeasyPrint): Week 9, optional dependency (heavy on Windows).
+- **PDF export** — implemented via Playwright `page.pdf()` (reuses the `[crawl]` extra; WeasyPrint dropped — it needs a separate GTK runtime on Windows).
 - **Playwright** — implemented: optional `[crawl]` extra (`pip install -e ".[crawl]"` + `playwright install chromium`); renders SPA shells only; every browser request is consent-gated; graceful raw-HTML fallback.
 - **Ownership-verification flow** (meta-tag/file upload): stretch goal, post-MVP.
